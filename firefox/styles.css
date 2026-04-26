@@ -1,0 +1,159 @@
+:root {
+  color-scheme: dark;
+  --cream: #fff6ea;
+  --muted: rgba(255, 246, 234, 0.68);
+  --line: rgba(255, 246, 234, 0.2);
+  --cookie: #f2a529;
+  --pink: #ff5f9e;
+  --pink-soft: #ffc4dc;
+  --brown: #2b130f;
+  --shadow: rgba(24, 10, 8, 0.42);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  min-height: 404px;
+  margin: 0;
+  font: 14px/1.45 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--cream);
+  background:
+    linear-gradient(to bottom left, rgba(255, 95, 158, 0.96) 0%, rgba(255, 95, 158, 0.86) 46%, rgba(242, 165, 41, 0.68) 66%, rgba(91, 48, 40, 0.78) 84%, rgba(43, 19, 15, 0.96) 100%),
+    linear-gradient(to top right, var(--brown) 0%, #7c3524 42%, #ff9f53 100%);
+}
+
+.popup {
+  min-height: 404px;
+  display: grid;
+  grid-template-rows: 1fr auto min-content;
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 24px 16px;
+  background: linear-gradient(180deg, rgba(43, 19, 15, 0.1), rgba(43, 19, 15, 0.34));
+}
+
+button {
+  appearance: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(255, 247, 236, 0.9);
+  outline-offset: 4px;
+}
+
+.power-button {
+  width: 164px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background:
+    linear-gradient(155deg, rgba(255, 246, 234, 0.22), rgba(255, 246, 234, 0.04)),
+    linear-gradient(155deg, rgba(91, 48, 40, 0.74), rgba(43, 19, 15, 0.66));
+  box-shadow:
+    0 28px 62px var(--shadow),
+    inset 0 0 0 1px rgba(255, 246, 234, 0.28),
+    inset 0 -18px 36px rgba(43, 19, 15, 0.32);
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.power-button:hover {
+  transform: translateY(-2px);
+}
+
+.power-button svg {
+  width: 82px;
+  height: 82px;
+  fill: none;
+  stroke: rgba(255, 246, 234, 0.66);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.15;
+  transition: stroke 160ms ease, filter 160ms ease;
+}
+
+.power-button.is-on {
+  background:
+    linear-gradient(150deg, var(--pink-soft) 0%, var(--pink) 42%, var(--cookie) 100%),
+    linear-gradient(155deg, rgba(255, 246, 234, 0.18), rgba(255, 246, 234, 0.04));
+}
+
+.power-button.is-on svg {
+  stroke: #fffaf2;
+  filter: drop-shadow(0 0 14px rgba(255, 246, 234, 0.46));
+}
+
+.power-button.is-connected {
+  box-shadow:
+    0 28px 60px var(--shadow),
+    0 0 0 7px rgba(52, 211, 153, 0.16),
+    inset 0 0 0 1px rgba(255, 246, 234, 0.32);
+}
+
+.identifier-block {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 42px;
+  align-items: center;
+  gap: 10px;
+}
+
+.identifier {
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(43, 19, 15, 0.26);
+  color: rgba(255, 246, 234, 0.9);
+  font: 11px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  overflow-wrap: anywhere;
+  box-shadow: inset 0 0 0 1px rgba(43, 19, 15, 0.1);
+}
+
+.icon-button {
+  width: 42px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(43, 19, 15, 0.28);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.icon-button:hover {
+  background: rgba(255, 95, 158, 0.32);
+}
+
+.icon-button svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.product-meta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 10.5px;
+  white-space: nowrap;
+}
+
+.product-meta strong {
+  color: var(--cream);
+  font-weight: 700;
+}

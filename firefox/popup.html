@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookie Bank</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="popup">
+    <button id="power" class="power-button" type="button" title="On/Off" aria-label="On/Off">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2v10"></path>
+        <path d="M18.36 6.64a9 9 0 1 1-12.72 0"></path>
+      </svg>
+    </button>
+
+    <section class="identifier-block" aria-label="Identifier">
+      <div id="identifier" class="identifier">-</div>
+      <button id="regenerate" class="icon-button" type="button" title="Regenerate identifier"
+        aria-label="Regenerate identifier">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12a9 9 0 0 1-15.3 6.3L3 15"></path>
+          <path d="M3 21v-6h6"></path>
+          <path d="M3 12A9 9 0 0 1 18.3 5.7L21 9"></path>
+          <path d="M21 3v6h-6"></path>
+        </svg>
+      </button>
+    </section>
+
+    <footer class="product-meta">
+      <strong>Cookie Bank</strong>
+      <span id="version">v0.1.0</span>
+      <span>&copy; 2026</span>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+
+</html>

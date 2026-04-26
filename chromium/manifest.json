@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Cookie Bank",
+  "version": "0.1.0",
+  "description": "Writes brokered cookie updates into this browser profile.",
+  "icons": {
+    "128": "icons/icon-1024.png"
+  },
+  "permissions": [
+    "cookies",
+    "nativeMessaging",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Cookie Bank",
+    "default_popup": "popup.html"
+  }
+}
